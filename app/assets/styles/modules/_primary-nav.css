@@ -14,15 +14,13 @@
   ul {
     margin: 0;
     padding: 0;
-    @mixin clearfix {
-    }
+    @mixin clearfix;
   }
 
   li {
     list-style: none;
     display: inline-block;
     padding-right: 7px;
-
     @mixin atMedium {
       padding-right: 20px;
       float: left;
@@ -32,14 +30,13 @@
 
   li:last-child {
     padding-right: 0;
-
     @mixin atMedium {
       padding-right: 20px;
     }
   }
 
   a {
-    color: white;
+    color: #fff;
     font-weight: 300;
     text-decoration: none;
     display: block;
@@ -48,8 +45,13 @@
     background-color: rgba($mainBlue, 0.5);
 
     @mixin atMedium {
+      font-size: 1rem;
       padding: 12px 0;
       background-color: transparent;
+
+      &.is-current-link {
+        color: #fabb69;
+      }
     }
   }
 }
